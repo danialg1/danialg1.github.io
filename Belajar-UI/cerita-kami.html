@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Cerita Kami - Kopi Street BAHAGIYA</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        .font-serif {
+            font-family: 'DM Serif Display', serif;
+        }
+        .navbar-sticky {
+            transition: all 0.3s ease-in-out;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- 1. NAVBAR KONSISTEN DENGAN HALAMAN UTAMA -->
+    <!-- Navbar ini akan langsung terlihat karena halamannya tidak dimulai dari atas -->
+    <header id="navbar" class="navbar-sticky sticky top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-lg shadow-xl">
+        <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Link ini kembali ke halaman utama. Asumsikan nama filenya 'index.html' -->
+                <a href="index.html" class="text-xl font-bold font-serif">Kopi Street BAHAGIYA.</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <!-- Link ini kembali ke section menu di halaman utama -->
+                    <a href="index.html#menu" class="hover:text-amber-400 transition-colors">Menu</a>
+                    <a href="https://maps.app.goo.gl/8m32peXuDZDJ21Cz6" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">Lokasi</a>
+                    <a href="index.html#kontak" class="hover:text-amber-400 transition-colors">Kontak</a>
+                </nav>
+                <a href="#" class="hidden md:inline-block rounded-md bg-amber-500 px-4 py-2 text-sm font-semibold text-gray-900 shadow-lg hover:bg-amber-400 transition-all duration-300 transform hover:scale-105">
+                    Pesan Online
+                </a>
+                <button class="md:hidden p-2 rounded-md hover:bg-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. KONTEN UTAMA HALAMAN TENTANG KAMI -->
+    <main class="overflow-hidden">
+        <div class="bg-gray-900 py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
+                    
+                    <!-- Kolom Teks Cerita -->
+                    <div class="lg:col-start-2 lg:row-start-1 reveal">
+                        <p class="text-base font-semibold leading-7 text-amber-400">Tentang Kami</p>
+                        <h1 class="mt-2 font-serif text-4xl font-bold tracking-tight text-white sm:text-5xl">Lebih dari Sekadar Kopi</h1>
+                        <div class="mt-6 text-lg leading-8 text-gray-300 space-y-6">
+                            <p>
+                                Berdiri sejak tahun 2019, <strong>Coffee Street BAHAGIYA</strong> hadir sebagai teman setia di tengah hiruk-pikuknya kawasan Rumah Sakit Yarsi Kota Pontianak. Selama lebih dari lima tahun, kami meracik kopi dengan sepenuh hati, menyuguhkan cita rasa yang tidak hanya nikmat tapi juga penuh kehangatan.
+                            </p>
+                            <p>
+                                Dari kopi klasik hingga racikan kekinian, semua kami sajikan dengan harga bersahabat dan pelayanan ramah khas UMKM lokal. Bagi kami, secangkir kopi bukan sekadar minuman—ia adalah penghubung cerita, semangat, dan kebahagiaan.
+                            </p>
+                             <p class="border-l-4 border-amber-400 pl-4 italic text-amber-100">
+                                Yuk, mampir dan rasakan sendiri hangatnya suasana serta rasa yang tak terlupakan di Coffee Street BAHAGIYA!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Gambar -->
+                    <div class="lg:col-start-1 reveal" style="transition-delay: 150ms;">
+                        <img src="https://arsitagx-master-article.s3.ap-southeast-1.amazonaws.com/article-photo/586/desain-interior-warung-kopi-instagramable-1.jpg" alt="Suasana Kedai Kopi Bahagiya" class="w-full h-full object-cover rounded-3xl shadow-2xl shadow-black/30">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3. FOOTER KONSISTEN -->
+    <footer class="bg-black" aria-labelledby="footer-heading">
+        <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8">
+           <!-- Footer disederhanakan karena link utama ada di navbar -->
+            <div class="border-t border-white/10 pt-8 mt-8">
+                <p class="text-center text-xs leading-5 text-gray-500">&copy; 2025 Kopi Street BAHAGIYA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script untuk Animasi Reveal saat Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.2 // Elemen akan muncul saat 20% terlihat
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
